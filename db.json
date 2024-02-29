@@ -1,0 +1,140 @@
+{
+  "recipes": [
+    {
+      "title": "Spaghetti Bolognese",
+      "description": "Classic Italian pasta dish with a rich meat sauce.",
+      "ingredients": [
+        "spaghetti",
+        "ground beef",
+        "tomato sauce",
+        "onions",
+        "garlic",
+        "herbs"
+      ],
+      "instructions": "Cook spaghetti; brown beef, onions, and garlic; add tomato sauce and herbs; combine with spaghetti.",
+      "imgUrl": "https://example.com/spaghetti.jpg"
+    },
+    {
+      "title": "Chicken Caesar Salad",
+      "description": "Refreshing salad with grilled chicken and Caesar dressing.",
+      "ingredients": [
+        "romaine lettuce",
+        "grilled chicken",
+        "croutons",
+        "Parmesan cheese",
+        "Caesar dressing"
+      ],
+      "instructions": "Combine lettuce, grilled chicken, croutons, and Parmesan cheese; toss with Caesar dressing.",
+      "imgUrl": "https://example.com/caesar-salad.jpg"
+    },
+    {
+      "title": "Vegetarian Stir-Fry",
+      "description": "Healthy and colorful stir-fry with a variety of vegetables.",
+      "ingredients": [
+        "broccoli",
+        "bell peppers",
+        "carrots",
+        "tofu",
+        "soy sauce",
+        "ginger",
+        "garlic"
+      ],
+      "instructions": "Stir-fry vegetables and tofu in a pan with soy sauce, ginger, and garlic until cooked.",
+      "imgUrl": "https://example.com/stir-fry.jpg"
+    },
+    {
+      "title": "Chocolate Chip Cookies",
+      "description": "Classic homemade chocolate chip cookies.",
+      "ingredients": [
+        "flour",
+        "butter",
+        "sugar",
+        "chocolate chips",
+        "vanilla extract",
+        "baking soda"
+      ],
+      "instructions": "Mix ingredients, drop spoonfuls onto a baking sheet, and bake until golden brown.",
+      "imgUrl": "https://example.com/chocolate-chip-cookies.jpg"
+    },
+    {
+      "title": "Mango Salsa",
+      "description": "Refreshing salsa with fresh mango, tomatoes, and cilantro.",
+      "ingredients": [
+        "mango",
+        "tomatoes",
+        "red onion",
+        "cilantro",
+        "lime juice",
+        "salt"
+      ],
+      "instructions": "Dice ingredients, mix together, and squeeze lime juice over the top.",
+      "imgUrl": "https://example.com/mango-salsa.jpg"
+    },
+    {
+      "title": "Grilled Cheese Sandwich",
+      "description": "Classic comfort food with melted cheese between toasted bread slices.",
+      "ingredients": ["bread", "cheddar cheese", "butter"],
+      "instructions": "Spread butter on bread, add cheese, and grill until the bread is golden and the cheese is melted.",
+      "imgUrl": "https://example.com/grilled-cheese.jpg"
+    },
+    {
+      "title": "Caprese Salad",
+      "description": "Simple salad with fresh tomatoes, mozzarella, and basil.",
+      "ingredients": [
+        "tomatoes",
+        "mozzarella cheese",
+        "fresh basil",
+        "balsamic glaze",
+        "olive oil",
+        "salt"
+      ],
+      "instructions": "Slice tomatoes and mozzarella, arrange with fresh basil, drizzle with balsamic glaze and olive oil, and sprinkle with salt.",
+      "imgUrl": "https://example.com/caprese-salad.jpg"
+    },
+    {
+      "title": "Chicken Noodle Soup",
+      "description": "Comforting soup with chicken, noodles, and vegetables.",
+      "ingredients": [
+        "chicken broth",
+        "cooked chicken",
+        "carrots",
+        "celery",
+        "onions",
+        "noodles",
+        "herbs"
+      ],
+      "instructions": "Combine ingredients and simmer until vegetables are tender and noodles are cooked.",
+      "imgUrl": "https://example.com/chicken-noodle-soup.jpg"
+    },
+    {
+      "title": "Pancakes",
+      "description": "Fluffy pancakes for a delicious breakfast.",
+      "ingredients": [
+        "flour",
+        "milk",
+        "eggs",
+        "baking powder",
+        "sugar",
+        "vanilla extract",
+        "butter"
+      ],
+      "instructions": "Mix ingredients, pour batter onto a griddle, and cook until bubbles form on the surface.",
+      "imgUrl": "https://example.com/pancakes.jpg"
+    },
+    {
+      "title": "Greek Salad",
+      "description": "Refreshing salad with tomatoes, cucumbers, olives, and feta cheese.",
+      "ingredients": [
+        "tomatoes",
+        "cucumbers",
+        "kalamata olives",
+        "feta cheese",
+        "red onion",
+        "olive oil",
+        "oregano"
+      ],
+      "instructions": "Dice ingredients, toss together with olive oil and oregano, and top with feta cheese.",
+      "imgUrl": "https://example.com/greek-salad.jpg"
+    }
+  ]
+}

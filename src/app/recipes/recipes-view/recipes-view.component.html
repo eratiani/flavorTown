@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container--recipe">
+  <ng-container *ngFor="let recipe of displeyedRecipes">
+    <app-recipe [currRecipe]="recipe"></app-recipe>
+  </ng-container>
+</div>
+<mat-paginator
+  [length]="recipes.length"
+  [pageSizeOptions]="[5, 10, 50, 100]"
+  aria-label="Select page"
+  (page)="onPageChange($event)"
+>
+</mat-paginator>
+
+<app-footer></app-footer>
