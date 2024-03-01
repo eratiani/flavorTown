@@ -1,6 +1,7 @@
 {
   "recipes": [
     {
+      "id": "c8fca8c4-5a51-4f1f-94a3-af7b98a7d65e",
       "title": "Spaghetti Bolognese",
       "description": "Classic Italian pasta dish with a rich meat sauce.",
       "ingredients": [
@@ -15,6 +16,7 @@
       "imgUrl": "https://example.com/spaghetti.jpg"
     },
     {
+      "id": "e0de3a95-9eb8-49ce-98c5-90ebc2a81c57",
       "title": "Chicken Caesar Salad",
       "description": "Refreshing salad with grilled chicken and Caesar dressing.",
       "ingredients": [
@@ -28,6 +30,7 @@
       "imgUrl": "https://example.com/caesar-salad.jpg"
     },
     {
+      "id": "697104d3-ecf3-4d3e-8be5-4883b9d341a5",
       "title": "Vegetarian Stir-Fry",
       "description": "Healthy and colorful stir-fry with a variety of vegetables.",
       "ingredients": [
@@ -43,6 +46,7 @@
       "imgUrl": "https://example.com/stir-fry.jpg"
     },
     {
+      "id": "80de6b0e-6d71-4c3a-bb3f-83f7b3cc7b3c",
       "title": "Chocolate Chip Cookies",
       "description": "Classic homemade chocolate chip cookies.",
       "ingredients": [
@@ -57,6 +61,7 @@
       "imgUrl": "https://example.com/chocolate-chip-cookies.jpg"
     },
     {
+      "id": "c1ef2b60-058b-4e32-a9e3-c36c24d8004a",
       "title": "Mango Salsa",
       "description": "Refreshing salsa with fresh mango, tomatoes, and cilantro.",
       "ingredients": [
@@ -71,6 +76,7 @@
       "imgUrl": "https://example.com/mango-salsa.jpg"
     },
     {
+      "id": "4ea3b6f1-8d26-4eaf-99e9-1a83551113d5",
       "title": "Grilled Cheese Sandwich",
       "description": "Classic comfort food with melted cheese between toasted bread slices.",
       "ingredients": ["bread", "cheddar cheese", "butter"],
@@ -78,6 +84,7 @@
       "imgUrl": "https://example.com/grilled-cheese.jpg"
     },
     {
+      "id": "7c2a465c-c65e-4ff5-8b6a-e8c6bc50a56a",
       "title": "Caprese Salad",
       "description": "Simple salad with fresh tomatoes, mozzarella, and basil.",
       "ingredients": [
@@ -92,6 +99,7 @@
       "imgUrl": "https://example.com/caprese-salad.jpg"
     },
     {
+      "id": "fea8c086-3b9e-4859-9fc7-6860d94e8ba3",
       "title": "Chicken Noodle Soup",
       "description": "Comforting soup with chicken, noodles, and vegetables.",
       "ingredients": [
@@ -107,6 +115,7 @@
       "imgUrl": "https://example.com/chicken-noodle-soup.jpg"
     },
     {
+      "id": "b7c158b9-695b-4484-b8c5-5ebaf2eeed3d",
       "title": "Pancakes",
       "description": "Fluffy pancakes for a delicious breakfast.",
       "ingredients": [
@@ -122,6 +131,7 @@
       "imgUrl": "https://example.com/pancakes.jpg"
     },
     {
+      "id": "83c09061-6c96-4f8c-852d-7bf9b6b7a456",
       "title": "Greek Salad",
       "description": "Refreshing salad with tomatoes, cucumbers, olives, and feta cheese.",
       "ingredients": [

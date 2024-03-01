@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../shared/services/recipe.service';
 import { PageEvent } from '@angular/material/paginator';
+import { IRecipe } from '../shared/interfaces/recipe.interface';
 
 @Component({
   selector: 'app-recipes-view',
@@ -8,8 +9,8 @@ import { PageEvent } from '@angular/material/paginator';
   styleUrls: ['./recipes-view.component.scss'],
 })
 export class RecipesViewComponent implements OnInit {
-  recipes: any[] = [];
-  displeyedRecipes!: any[];
+  recipes!: IRecipe[];
+  displeyedRecipes!: IRecipe[];
   constructor(public recipeServ: RecipeService) {}
   async ngOnInit(): Promise<void> {
     this.recipes = await this.recipeServ.getRecipes();
