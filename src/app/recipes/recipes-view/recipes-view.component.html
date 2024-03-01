@@ -6,7 +6,10 @@
 
   <div class="row container--recipe mt-4">
     <ng-container *ngFor="let recipe of displeyedRecipes">
-      <app-recipe class="mb-4" [currRecipe]="recipe"></app-recipe>
+      <app-recipe
+        class="mb-4 d-flex justify-content-center"
+        [currRecipe]="recipe"
+      ></app-recipe>
     </ng-container>
   </div>
 </div>

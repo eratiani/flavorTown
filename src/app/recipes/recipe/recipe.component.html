@@ -16,5 +16,7 @@
       the card's content.
     </p>
   </div>
-  <div class="overlay-card" *ngIf="isHovered"></div>
+  <div class="overlay-card" *ngIf="isHovered">
+    <div (click)="onNavigation()" class="btn btn-primary">More Details</div>
+  </div>
 </div>

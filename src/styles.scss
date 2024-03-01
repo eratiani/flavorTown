@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-
+$header_footer_color: rgb(26, 30, 31);
+$priamry_color: rgb(22, 22, 22);
+$secondary_color: rgb(43, 43, 43);
+$primary_font-size: 2;
+$btn-active: rgb(0, 163, 224);
 html,
 body {
   height: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 body {
   margin: 0;

@@ -1,5 +1,8 @@
 <div class="row">
-  <div *ngIf="search !== 'favorites'" class="col-8 form-floating">
+  <div
+    *ngIf="search !== 'favorites'"
+    class="col-sm-12 mb-4 col-md-8 form-floating"
+  >
     <input
       [(ngModel)]="searchInput"
       (input)="onSearch($event)"
@@ -10,8 +13,8 @@
     />
     <label class="filter-col mx-4" for="myInput">filter by {{ search }}.</label>
   </div>
-  <div class="container--dropDown col-4">
-    <mat-form-field>
+  <div class="container--dropDown col-sm-12 col-md-4">
+    <mat-form-field class="col-12">
       <mat-label>Select an option</mat-label>
       <mat-select
         [(value)]="search"

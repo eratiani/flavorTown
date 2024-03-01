@@ -1,1 +1,25 @@
-<p>recipe-details works!</p>
+<div class="container--main">
+  <app-header></app-header>
+  <div *ngIf="curRecipe" class="container--project mb-4">
+    <div class="container--img">
+      <img
+        appLazyLoading
+        src="{{ '../../../assets/recipe-imgs/' + curRecipe.imgUrl }}"
+        alt="{{ curRecipe.title }}"
+        class="project--img"
+      />
+    </div>
+    <div id="`{{ curRecipe.id }}`" class="container__project--text">
+      <h2 class="project--title">{{ curRecipe.title }}</h2>
+      <p>{{ curRecipe.description }}</p>
+      <p *ngFor="let ingredient of curRecipe.ingredients">{{ ingredient }}</p>
+    </div>
+    <div class="container--btn">
+      <a class="btn btn-primary mx-2" (click)="goHome()">Go Back</a>
+      <a class="btn btn-primary" (click)="onFavClick()">{{
+        curRecipe.favorites ? "Remove From Favorites" : "Add To Favorites"
+      }}</a>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
