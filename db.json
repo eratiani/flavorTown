@@ -12,6 +12,7 @@
         "garlic",
         "herbs"
       ],
+      "favorites": false,
       "instructions": "Cook spaghetti; brown beef, onions, and garlic; add tomato sauce and herbs; combine with spaghetti.",
       "imgUrl": "https://example.com/spaghetti.jpg"
     },
@@ -26,6 +27,7 @@
         "Parmesan cheese",
         "Caesar dressing"
       ],
+      "favorites": true,
       "instructions": "Combine lettuce, grilled chicken, croutons, and Parmesan cheese; toss with Caesar dressing.",
       "imgUrl": "https://example.com/caesar-salad.jpg"
     },
@@ -42,6 +44,7 @@
         "ginger",
         "garlic"
       ],
+      "favorites": false,
       "instructions": "Stir-fry vegetables and tofu in a pan with soy sauce, ginger, and garlic until cooked.",
       "imgUrl": "https://example.com/stir-fry.jpg"
     },
@@ -57,6 +60,7 @@
         "vanilla extract",
         "baking soda"
       ],
+      "favorites": false,
       "instructions": "Mix ingredients, drop spoonfuls onto a baking sheet, and bake until golden brown.",
       "imgUrl": "https://example.com/chocolate-chip-cookies.jpg"
     },
@@ -72,6 +76,7 @@
         "lime juice",
         "salt"
       ],
+      "favorites": false,
       "instructions": "Dice ingredients, mix together, and squeeze lime juice over the top.",
       "imgUrl": "https://example.com/mango-salsa.jpg"
     },
@@ -80,6 +85,7 @@
       "title": "Grilled Cheese Sandwich",
       "description": "Classic comfort food with melted cheese between toasted bread slices.",
       "ingredients": ["bread", "cheddar cheese", "butter"],
+      "favorites": false,
       "instructions": "Spread butter on bread, add cheese, and grill until the bread is golden and the cheese is melted.",
       "imgUrl": "https://example.com/grilled-cheese.jpg"
     },
@@ -95,6 +101,7 @@
         "olive oil",
         "salt"
       ],
+      "favorites": false,
       "instructions": "Slice tomatoes and mozzarella, arrange with fresh basil, drizzle with balsamic glaze and olive oil, and sprinkle with salt.",
       "imgUrl": "https://example.com/caprese-salad.jpg"
     },
@@ -111,6 +118,7 @@
         "noodles",
         "herbs"
       ],
+      "favorites": false,
       "instructions": "Combine ingredients and simmer until vegetables are tender and noodles are cooked.",
       "imgUrl": "https://example.com/chicken-noodle-soup.jpg"
     },
@@ -127,6 +135,7 @@
         "vanilla extract",
         "butter"
       ],
+      "favorites": false,
       "instructions": "Mix ingredients, pour batter onto a griddle, and cook until bubbles form on the surface.",
       "imgUrl": "https://example.com/pancakes.jpg"
     },
@@ -143,6 +152,7 @@
         "olive oil",
         "oregano"
       ],
+      "favorites": false,
       "instructions": "Dice ingredients, toss together with olive oil and oregano, and top with feta cheese.",
       "imgUrl": "https://example.com/greek-salad.jpg"
     }

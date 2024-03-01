@@ -1,8 +1,14 @@
 <app-header></app-header>
-<div class="container--recipe">
-  <ng-container *ngFor="let recipe of displeyedRecipes">
-    <app-recipe [currRecipe]="recipe"></app-recipe>
-  </ng-container>
+<div class="container mt-4">
+  <h2 class="text-uppercase">all Recipes</h2>
+
+  <app-search-bar></app-search-bar>
+
+  <div class="row container--recipe mt-4">
+    <ng-container *ngFor="let recipe of displeyedRecipes">
+      <app-recipe class="mb-4" [currRecipe]="recipe"></app-recipe>
+    </ng-container>
+  </div>
 </div>
 <mat-paginator
   [length]="recipes.length"

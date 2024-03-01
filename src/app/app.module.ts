@@ -8,9 +8,10 @@ import { CoreModule } from './core/core.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { TextCutPipe } from './shared/pipes/text-cut.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, TextCutPipe],
+  declarations: [AppComponent, TextCutPipe, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
