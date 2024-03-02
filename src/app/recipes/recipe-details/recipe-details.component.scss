@@ -1,124 +1,109 @@
-@use "../../../styles.scss" as mainStyles;
-.container--main {
-  background-color: mainStyles.$priamry_color;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 10vh 80vh 10vh;
-  .container--project {
-    width: 87.5vw;
-    margin: 0 auto;
-    height: 50vh;
-    padding-bottom: 50px;
-    min-height: 550px;
-    --bg-gradient: none;
-    border-width: 1px 1px 1px 1px;
-    border-style: solid solid solid solid;
-    border-color: rgba(85, 85, 85, 1) rgba(85, 85, 85, 1) rgba(85, 85, 85, 1)
-      rgba(85, 85, 85, 1);
-    border-radius: 6px 6px 6px 6px;
-    overflow: hidden;
-    transform: translateZ(0);
-    font-size: 15px;
+.container--page {
+  padding: 0 15px;
+  background-color: #f3f2fa;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .container--card-content {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-    color: white;
-    padding: 1px;
-    position: relative;
+    margin-bottom: 98px;
 
-    .container--img {
+    .card--content--return--btn {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 24px;
+      background-color: #ffffff;
+      margin-right: 20px;
+    }
+    .card--content--return--btn > img {
+      max-width: 100%;
+    }
+  }
+  .container--card-content--inner {
+    width: 80%;
+    margin: 0 auto;
+
+    .container--image > img {
       width: 100%;
-      max-height: 500px;
-      border-radius: 6px 6px 6px 6px;
-      img {
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
-      }
     }
-    .container__project--text {
-      max-height: auto;
+    .card--author {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 40px;
+      margin-bottom: 8px;
+      color: #1a1a1f;
+    }
+
+    .dot {
+      width: 3px;
+      height: 3px;
+      background-color: #85858d;
+      margin: 0 5px;
+      border-radius: 50%;
+    }
+    .card--title {
+      font-size: 20px;
+
+      line-height: 28px;
+      color: #1a1a1f;
+      margin-top: 0px;
+      margin-bottom: 24px;
       overflow: hidden;
-      margin-bottom: 50px;
-      .project--description {
-        font-size: 14px;
-      }
-      margin-left: 15px;
     }
-    .container--btn {
-      position: absolute;
-      bottom: 15px;
-      left: 0px;
-      .project__details--btn {
-        display: block;
-        text-decoration: none;
-        color: mainStyles.$btn-active;
-        cursor: pointer;
-
-        margin-left: 41px;
-        position: relative;
-      }
-      .project__details--btn::before {
-        content: url("../../../assets/arrow-project-item.svg");
-        cursor: auto;
-        position: absolute;
-        left: -26px;
-        top: 50%;
-        width: 16px;
-        height: 13px;
-        transform: translateY(-50%);
-      }
-    }
-    @media (min-width: 768px) {
-      font-size: 18px;
-
-      .container--img {
-        height: 300px;
-      }
-      .container__project--text {
-        .project--description {
-          font-size: 17px;
-        }
-      }
-      .container--btn {
-        bottom: 35px;
-      }
-    }
-    @media (min-width: 1024px) {
-      font-size: 18px;
-      width: 87.5vw;
+    .card--ingredient--container {
+      font-size: 12px;
+      display: flex;
       height: auto;
-      .container--img {
-        height: auto;
-      }
-      .container__project--text {
-        .project--description {
-          font-size: 17px;
-        }
-      }
-      .container--btn {
-        bottom: 35px;
-      }
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 0px;
+      margin-bottom: 40px;
     }
-    @media (min-width: 1440px) {
-      font-size: 18px;
-      width: 980px;
-      height: auto;
-      .container--img {
-        height: auto;
-      }
-      .container__project--text {
-        .project--description {
-          font-size: 17px;
-        }
-      }
-      .container--btn {
-        bottom: 35px;
+    .card--ingredient--container > span {
+      border-radius: 30px;
+      height: 28px;
+      padding: 6px 10px 6px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card--description {
+      font-size: 16px;
+      line-height: 28px;
+      color: #404049;
+      overflow: hidden;
+      margin-top: 0px;
+      margin-bottom: 16px;
+    }
+    .card--header {
+      font-size: 20px;
+      line-height: 28px;
+      color: #404049;
+      overflow: hidden;
+      margin-top: 0px;
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    padding: 0 76px;
+    .container--card-content {
+      .card--content--return--btn {
+        width: 44px;
+        height: 44px;
       }
     }
   }
-  .footer {
-    justify-self: baseline;
+  @media only screen and (min-width: 1024px) {
+    .container--card-content--inner {
+      width: 720px;
+    }
   }
 }

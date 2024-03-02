@@ -22,7 +22,7 @@ export class RecipesViewComponent implements OnInit, OnDestroy {
     this.recipes = await this.recipeServ.getRecipes();
     this.displeyedRecipes = this.recipes.slice(0, 5);
     this.debouncingSubscription = this.debouncingServ
-      .debounce(300)
+      .debounce(500)
       .subscribe(async (val) => {
         this.recipes = this.filterBySearchInp(
           val,
@@ -54,7 +54,7 @@ export class RecipesViewComponent implements OnInit, OnDestroy {
         const regex2 = new RegExp(`^${query}`);
         return recipes.filter((recipe) =>
           recipe.ingredients.some((ingredient) =>
-            regex2.test(ingredient.toLowerCase())
+            regex2.test(ingredient.title.toLowerCase())
           )
         );
       case ' ':

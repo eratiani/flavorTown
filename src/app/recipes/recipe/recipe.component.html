@@ -7,16 +7,24 @@
   <img
     [@cardHover]="isHovered"
     class="card-img-top"
-    src="../../../assets/recipe-imgs/download.jpg"
+    src="{{ '../../../assets/recipe-imgs/' + currRecipe.imgUrl }}"
     alt="Card image cap"
   />
   <div class="card-body">
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      {{ currRecipe.title }}
     </p>
   </div>
-  <div class="overlay-card" *ngIf="isHovered">
+  <div
+    class="overlay-card container d-flex flex-column justify-content-between py-4 align-items-center"
+    *ngIf="isHovered"
+  >
+    <h2 class="card-text">
+      {{ currRecipe.description | textCut : 4 }}
+    </h2>
+    <p class="card-text">
+      {{ currRecipe.instructions | textCut : 10 }}
+    </p>
     <div (click)="onNavigation()" class="btn btn-primary">More Details</div>
   </div>
 </div>
