@@ -38,7 +38,7 @@
       ],
       "favorites": false,
       "instructions": "Cook spaghetti; brown beef, onions, and garlic; add tomato sauce and herbs; combine with spaghetti.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "bolognese.jpg"
     },
     {
       "id": "e0de3a95-9eb8-49ce-98c5-90ebc2a81c57",
@@ -73,7 +73,7 @@
       ],
       "favorites": true,
       "instructions": "Combine lettuce, grilled chicken, croutons, and Parmesan cheese; toss with Caesar dressing.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "caesar-salad-chicken.jpg"
     },
     {
       "id": "697104d3-ecf3-4d3e-8be5-4883b9d341a5",
@@ -118,7 +118,7 @@
       ],
       "favorites": true,
       "instructions": "Stir-fry vegetables and tofu in a pan with soy sauce, ginger, and garlic until cooked.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "veg-stir-fry.jpg"
     },
     {
       "id": "80de6b0e-6d71-4c3a-bb3f-83f7b3cc7b3c",
@@ -158,7 +158,7 @@
       ],
       "favorites": false,
       "instructions": "Mix ingredients, drop spoonfuls onto a baking sheet, and bake until golden brown.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "choc-chip.jpg"
     },
     {
       "id": "c1ef2b60-058b-4e32-a9e3-c36c24d8004a",
@@ -198,7 +198,7 @@
       ],
       "favorites": false,
       "instructions": "Dice ingredients, mix together, and squeeze lime juice over the top.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "mango-salsa.jpg"
     },
     {
       "id": "4ea3b6f1-8d26-4eaf-99e9-1a83551113d5",
@@ -223,7 +223,7 @@
       ],
       "favorites": false,
       "instructions": "Spread butter on bread, add cheese, and grill until the bread is golden and the cheese is melted.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "grilled-chese-sand.jpg"
     },
     {
       "id": "7c2a465c-c65e-4ff5-8b6a-e8c6bc50a56a",
@@ -263,7 +263,7 @@
       ],
       "favorites": false,
       "instructions": "Slice tomatoes and mozzarella, arrange with fresh basil, drizzle with balsamic glaze and olive oil, and sprinkle with salt.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "caprese-sal.jpg"
     },
     {
       "id": "fea8c086-3b9e-4859-9fc7-6860d94e8ba3",
@@ -308,7 +308,7 @@
       ],
       "favorites": false,
       "instructions": "Combine ingredients and simmer until vegetables are tender and noodles are cooked.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "chicken-nood-soup.jpg"
     },
     {
       "id": "b7c158b9-695b-4484-b8c5-5ebaf2eeed3d",
@@ -353,7 +353,7 @@
       ],
       "favorites": false,
       "instructions": "Mix ingredients, pour batter onto a griddle, and cook until bubbles form on the surface.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "pankackes.jpg"
     },
     {
       "id": "83c09061-6c96-4f8c-852d-7bf9b6b7a456",
@@ -398,7 +398,7 @@
       ],
       "favorites": false,
       "instructions": "Dice ingredients, toss together with olive oil and oregano, and top with feta cheese.",
-      "imgUrl": "download.jpg"
+      "imgUrl": "greek-sal.jpg"
     }
   ]
 }

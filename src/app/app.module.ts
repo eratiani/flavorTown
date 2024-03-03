@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RecipeFormModule } from './recipe-form/recipe-form.module';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -18,6 +19,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RecipesModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    RecipeFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

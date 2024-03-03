@@ -1,0 +1,180 @@
+<form [formGroup]="recipeCreateForm" (ngSubmit)="createRecipe()">
+  <div
+    class="image-upload-container"
+    (dragover)="onDragOver($event)"
+    (drop)="onDrop($event)"
+  >
+    <p class="upload--title">Upload Photo</p>
+    <label *ngIf="!image" class="image-upload-input" for="img--input">
+      <div class="input--img--wrapper">
+        <img src="../../../assets/folder-add.png" alt="folder" />
+      </div>
+      <p class="input--upload--text">
+        Drop Photo Here or <span>Choose Photo</span>
+      </p>
+    </label>
+    <input
+      class="image-upload-input--hidden"
+      formControlName="image"
+      id="img--input"
+      type="file"
+      (change)="onFileSelected($event)"
+    />
+    <div *ngIf="image" class="img--uploaded--placeholder">
+      <div class="placeholder--wrapper">
+        <img src="../../../assets/gallery--preview.png" alt="Uploaded Image" />
+        <span class="img--name">{{ imageName }}</span>
+      </div>
+      <span class="close--btn" (click)="removeImage()">X</span>
+    </div>
+  </div>
+  <div class="author--title--wrapper d-flex">
+    <div class="form--title container--width me-4">
+      <label for="title--inp">Title *</label>
+      <input
+        formControlName="title"
+        id="title--inp"
+        placeholder="Enter Title"
+        type="text"
+        class="title--input"
+      />
+      <p
+        class="validation--1"
+        [style.color]="redOrGreenColor('title', 'minlength')"
+      >
+        <span
+          [style.backgroundColor]="redOrGreenColor('title', 'minlength')"
+          class="dot"
+        ></span
+        >Min Length 2
+      </p>
+      <p
+        class="validation--1"
+        [style.color]="redOrGreenColor('title', 'required')"
+      >
+        <span
+          [style.backgroundColor]="redOrGreenColor('title', 'required')"
+          class="dot"
+        ></span
+        >Required Field
+      </p>
+    </div>
+    <div class="ingredients">
+      <div formArrayName="ingredients">
+        <label for="title--inp">Ingredients *</label>
+
+        <div *ngFor="let control of getFormArrayControls; let i = index">
+          <input
+            [formControl]="control"
+            placeholder="Type Ingredient"
+            type="text"
+            id="ingredient--inp"
+            class="ingredient--input"
+          />
+          <button
+            class="btn btn-danger ms-2"
+            type="button"
+            *ngIf="getFormArrayControls.length > 1"
+            (click)="removeFormControl(i)"
+          >
+            X
+          </button>
+          <p
+            class="validation--1"
+            [style.color]="redOrGreenColor('ingredients', 'required', i)"
+          >
+            <span
+              [style.backgroundColor]="
+                redOrGreenColor('ingredients', 'required', i)
+              "
+              class="dot"
+            ></span
+            >Required Field
+          </p>
+        </div>
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="addFormControl()"
+        >
+          Add ingredient
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="description--wrapper">
+    <label class="desc--from--label" for="desc--from">Description *</label>
+    <textarea
+      formControlName="description"
+      class="form-txt-area"
+      id="desc--from"
+      name=""
+      cols="30"
+      rows="10"
+      placeholder="შეიყვნანეთ აღწერა"
+    ></textarea>
+    <p
+      class="validation--1"
+      [style.color]="redOrGreenColor('description', 'minlength')"
+    >
+      <span
+        [style.backgroundColor]="redOrGreenColor('description', 'minlength')"
+        class="dot"
+      ></span
+      >Min Length 4
+    </p>
+    <p
+      class="validation--1"
+      [style.color]="redOrGreenColor('description', 'required')"
+    >
+      <span
+        [style.backgroundColor]="redOrGreenColor('description', 'required')"
+        class="dot"
+      ></span
+      >Required Field
+    </p>
+  </div>
+  <div class="instruction--wrapper">
+    <label class="inst--from--label" for="inst--from">Instructions *</label>
+    <textarea
+      formControlName="instruction"
+      class="form-txt-area"
+      id="inst--from"
+      name=""
+      cols="30"
+      rows="10"
+      placeholder="შეიყვნანეთ აღწერა"
+    ></textarea>
+    <p
+      class="validation--1"
+      [style.color]="redOrGreenColor('instruction', 'minlength')"
+    >
+      <span
+        [style.backgroundColor]="redOrGreenColor('instruction', 'minlength')"
+        class="dot"
+      ></span
+      >Min Length 4
+    </p>
+    <p
+      class="validation--1"
+      [style.color]="redOrGreenColor('instruction', 'required')"
+    >
+      <span
+        [style.backgroundColor]="redOrGreenColor('instruction', 'required')"
+        class="dot"
+      ></span
+      >Required Field
+    </p>
+  </div>
+
+  <div class="container--btn">
+    <button
+      [disabled]="!recipeCreateForm.valid"
+      [style.backgroundColor]="recipeCreateForm.valid ? '#5d37f3' : 'white'"
+      class="submit--btn"
+      type="submit"
+    >
+      Create
+    </button>
+  </div>
+</form>

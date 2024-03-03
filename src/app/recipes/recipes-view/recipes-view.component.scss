@@ -1,6 +1,9 @@
 .container--recipe {
   display: grid;
   grid-template-columns: 1fr;
+  background-image: url(../../../assets/recipe-imgs/woman-1979272_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   @media screen and (min-width: 580px) {
     grid-template-columns: 1fr 1fr;
   }
