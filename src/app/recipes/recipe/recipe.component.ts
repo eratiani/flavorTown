@@ -37,7 +37,11 @@ export class RecipeComponent {
     this.isHovered = false;
   }
   onNavigation() {
-    this.shortUuidServ.setUuid('1', this.currRecipe.id);
-    this.router.navigate(['/home/1']);
+    ////this way id is lost whan refreshed did not want to set id in local/sesion storage
+    // this.shortUuidServ.setUuid('1', this.currRecipe.id);
+    // this.router.navigate(['/home/1']);
+    this.router.navigate(['/home/details'], {
+      queryParams: { id: this.currRecipe.id },
+    });
   }
 }

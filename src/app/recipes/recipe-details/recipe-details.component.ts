@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ShortUuidService } from 'src/app/shared/services/short-uuid.service';
 import { IRecipe } from '../shared/interfaces/recipe.interface';
 import { RecipeService } from '../shared/services/recipe.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -11,15 +10,20 @@ import { Router } from '@angular/router';
 })
 export class RecipeDetailsComponent implements OnInit {
   constructor(
-    private shortUuidServ: ShortUuidService,
+    private route: ActivatedRoute,
     private dbServ: RecipeService,
     private router: Router
   ) {}
   curRecipe!: IRecipe;
   async ngOnInit(): Promise<void> {
-    const id = this.shortUuidServ.getActualUuid('1');
-    if (!id) return;
-    this.curRecipe = await this.dbServ.getRecipe(id);
+    /// same id lost on refresh
+    // const id = this.shortUuidServ.getActualUuid('1');
+    this.route.queryParams.subscribe(async (params) => {
+      const id = params['id'];
+
+      if (!id) return;
+      this.curRecipe = await this.dbServ.getRecipe(id);
+    });
   }
   goHome() {
     this.router.navigate(['/home']);

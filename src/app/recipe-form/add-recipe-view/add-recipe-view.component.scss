@@ -8,12 +8,20 @@
   border-radius: 24px;
   background-color: #e4e3eb;
 }
+.container--form {
+  width: 98%;
+  margin: 0 auto;
+  overflow: hidden;
+  @media only screen and (min-width: 600px) {
+    width: auto;
+  }
+}
 .form--content--return--btn > img {
   max-width: 100%;
 }
 .container--page {
-  padding: 33px 76px 65px 76px;
   background-color: #fbfaff;
+  padding: 0;
   padding-top: 40px;
   padding-bottom: 110px;
 }
@@ -23,10 +31,6 @@
   align-items: flex-start;
 }
 
-.container--form--inner {
-  width: 600px;
-  margin-left: 240px;
-}
 .title--form {
   font-size: 32px;
   line-height: 50px;

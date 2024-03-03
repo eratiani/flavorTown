@@ -28,8 +28,8 @@
       <span class="close--btn" (click)="removeImage()">X</span>
     </div>
   </div>
-  <div class="author--title--wrapper d-flex">
-    <div class="form--title container--width me-4">
+  <div class="author--title--wrapper row justify-content-between">
+    <div class="form--title col-sm-12 col-md-5">
       <label for="title--inp">Title *</label>
       <input
         formControlName="title"
@@ -59,20 +59,23 @@
         >Required Field
       </p>
     </div>
-    <div class="ingredients">
+    <div class="ingredients col-sm-12 col-md-6">
       <div formArrayName="ingredients">
         <label for="title--inp">Ingredients *</label>
 
-        <div *ngFor="let control of getFormArrayControls; let i = index">
+        <div
+          *ngFor="let control of getFormArrayControls; let i = index"
+          class="row"
+        >
           <input
             [formControl]="control"
             placeholder="Type Ingredient"
             type="text"
             id="ingredient--inp"
-            class="ingredient--input"
+            class="ingredient--input col-9 col-md-10"
           />
           <button
-            class="btn btn-danger ms-2"
+            class="btn btn-danger ms-2 col-2 col-md-1"
             type="button"
             *ngIf="getFormArrayControls.length > 1"
             (click)="removeFormControl(i)"
@@ -111,7 +114,7 @@
       name=""
       cols="30"
       rows="10"
-      placeholder="შეიყვნანეთ აღწერა"
+      placeholder="Enter Description"
     ></textarea>
     <p
       class="validation--1"
@@ -137,30 +140,30 @@
   <div class="instruction--wrapper">
     <label class="inst--from--label" for="inst--from">Instructions *</label>
     <textarea
-      formControlName="instruction"
+      formControlName="instructions"
       class="form-txt-area"
       id="inst--from"
       name=""
       cols="30"
       rows="10"
-      placeholder="შეიყვნანეთ აღწერა"
+      placeholder="Enter Instructions"
     ></textarea>
     <p
       class="validation--1"
-      [style.color]="redOrGreenColor('instruction', 'minlength')"
+      [style.color]="redOrGreenColor('instructions', 'minlength')"
     >
       <span
-        [style.backgroundColor]="redOrGreenColor('instruction', 'minlength')"
+        [style.backgroundColor]="redOrGreenColor('instructions', 'minlength')"
         class="dot"
       ></span
       >Min Length 4
     </p>
     <p
       class="validation--1"
-      [style.color]="redOrGreenColor('instruction', 'required')"
+      [style.color]="redOrGreenColor('instructions', 'required')"
     >
       <span
-        [style.backgroundColor]="redOrGreenColor('instruction', 'required')"
+        [style.backgroundColor]="redOrGreenColor('instructions', 'required')"
         class="dot"
       ></span
       >Required Field

@@ -36,7 +36,7 @@
           "backgroundColor": "rgb(177, 28, 214)"
         }
       ],
-      "favorites": false,
+      "favorites": true,
       "instructions": "Cook spaghetti; brown beef, onions, and garlic; add tomato sauce and herbs; combine with spaghetti.",
       "imgUrl": "bolognese.jpg"
     },
@@ -71,7 +71,7 @@
           "backgroundColor": "rgb(177, 28, 214)"
         }
       ],
-      "favorites": true,
+      "favorites": false,
       "instructions": "Combine lettuce, grilled chicken, croutons, and Parmesan cheese; toss with Caesar dressing.",
       "imgUrl": "caesar-salad-chicken.jpg"
     },
@@ -399,6 +399,111 @@
       "favorites": false,
       "instructions": "Dice ingredients, toss together with olive oil and oregano, and top with feta cheese.",
       "imgUrl": "greek-sal.jpg"
+    },
+    {
+      "id": "003afc95-1ae8-4d85-b781-1561e242158b",
+      "imgUrl": "default.jpg",
+      "instructions": "1) Prepare the Dough:\n\nIn a large mixing bowl, combine the flour and salt.\nGradually add water while kneading the dough until it becomes smooth and elastic.\nCover the dough with a damp cloth and let it rest for at least 30 minutes.\n2) Prepare the Filling:\n\nIn a large mixing bowl, combine the ground meat, chopped onion, minced garlic, coriander, cumin, salt, and pepper.\nMix the ingredients thoroughly until well combined.\n3) Shape the Khinkali:\n\nTake a small portion of the dough and roll it into a thin circle on a floured surface.\nPlace a spoonful of the meat filling in the center of the dough circle.\nLift the edges of the dough, creating pleats, and twist the top to seal the khinkali. The traditional shape resembles a twisted topknot.\n4) Cook the Khinkali:\n\nBring a large pot of water to a boil. Optionally, you can add quartered onions, bay leaves, and salt for extra flavor.\nGently place the khinkali in the boiling water and cook for about 10-12 minutes, or until the dumplings float to the surface.\n5) Serve:\n\nCarefully remove the khinkali from the pot with a slotted spoon and place them on a serving platter.\nServe hot with a side of black pepper and enjoy the burst of flavors with each juicy bite.",
+      "title": "Traditional Georgian Khinkali Recipe",
+      "favorites": true,
+      "description": "Khinkali, a beloved Georgian dumpling, is a culinary masterpiece that has been perfected over generations. These juicy, meat-filled dumplings are a staple in Georgian cuisine, known for their distinctive shape and delicious flavor. This recipe will guide you through the process of creating authentic khinkali that will transport your taste buds to the vibrant streets of Tbilisi.",
+      "ingredients": [
+        {
+          "title": "3 cups all-purpose flour",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 cup water",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1/2 teaspoon salt",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": " pound ground beef or a mix of beef and pork",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 large onion, finely chopped",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "2 cloves garlic, minced",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 teaspoon ground coriander",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 teaspoon ground cumin",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "Salt and pepper to taste",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "6 cups water",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 onion, quartered",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "2 bay leaves",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "Salt to taste",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ]
+    },
+    {
+      "id": "f00520fb-4deb-46a1-9774-5db6facdd044",
+      "imgUrl": "default.jpg",
+      "instructions": "fsdfsd",
+      "title": "asd",
+      "favorites": false,
+      "description": "dsfsdf",
+      "ingredients": [
+        {
+          "title": "sdsd",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ]
+    },
+    {
+      "id": "6f4ec50c-e54d-42cd-8b33-631c3447b5b5",
+      "imgUrl": "default.jpg",
+      "instructions": "asdsad",
+      "title": "asd",
+      "favorites": false,
+      "description": "sadasd",
+      "ingredients": [
+        {
+          "title": "asd",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ]
     }
   ]
 }

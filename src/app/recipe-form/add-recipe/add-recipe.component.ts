@@ -5,9 +5,11 @@ import {
   Validators,
   FormArray,
   FormControl,
-  AbstractControl,
 } from '@angular/forms';
-
+import { MatDialog } from '@angular/material/dialog';
+import { IRecipe } from 'src/app/recipes/shared/interfaces/recipe.interface';
+import { RecipeService } from 'src/app/recipes/shared/services/recipe.service';
+import { SucessModalComponent } from 'src/app/stand-alone/sucess-modal/sucess-modal.component';
 @Component({
   selector: 'app-add-recipe',
   templateUrl: './add-recipe.component.html',
@@ -16,19 +18,19 @@ import {
 export class AddRecipeComponent implements OnInit {
   image: string | undefined;
   imageName: string | undefined;
-  formLocalStorage: any;
-  localStorageS: any;
   recipeCreateForm!: FormGroup;
-  createRecipe() {
-    throw new Error('Method not implemented.');
-  }
-  constructor(private formBuilder: FormBuilder) {}
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private recipeServ: RecipeService,
+    public matSuccess: MatDialog
+  ) {}
   ngOnInit(): void {
     this.recipeCreateForm = this.formBuilder.group({
       image: [null, [Validators.required]],
       title: [null, [Validators.required, Validators.minLength(2)]],
       description: [null, [Validators.required, Validators.minLength(4)]],
-      instruction: [null, [Validators.required, Validators.minLength(4)]],
+      instructions: [null, [Validators.required, Validators.minLength(4)]],
       ingredients: new FormArray([new FormControl(null, Validators.required)]),
     });
   }
@@ -100,7 +102,6 @@ export class AddRecipeComponent implements OnInit {
   ): boolean | undefined {
     if (formElement === 'ingredients') {
       const control = this.recipeCreateForm.get(`${formElement}.${ind}`);
-      console.log(control);
 
       return control?.hasError(`${error}`);
     }
@@ -113,8 +114,6 @@ export class AddRecipeComponent implements OnInit {
     errorReq: string = 'required'
   ) {
     if (formElement === 'ingredients') {
-      console.log(this.checkForError(`${formElement}.${ind}`, `${error}`, ind));
-
       return this.checkForError(`${formElement}.${ind}`, `${error}`, ind) ||
         this.checkForError(`${formElement}.${ind}`, `${errorReq}`, ind)
         ? this.recipeCreateForm.get(`${formElement}.${ind}`)?.dirty ||
@@ -138,4 +137,31 @@ export class AddRecipeComponent implements OnInit {
       : '';
   }
   ///utility
+
+  //////add recipe
+  createRecipe() {
+    if (!this.recipeCreateForm.valid) return;
+    const image = this.converToBlob(this.image as string);
+    const defaultImg = 'default.jpg';
+    const favorites: boolean = false;
+    const { title, description, instructions, ingredients } =
+      this.recipeCreateForm.value;
+    const changedIngredients = (ingredients as string[]).map((ing: string) => ({
+      title: ing,
+      textColor: 'white',
+      backgroundColor: 'rgb(177, 28, 214)',
+    }));
+    const submitObj: Omit<IRecipe, 'id'> = {
+      imgUrl: defaultImg,
+      instructions,
+      title,
+      favorites,
+      description,
+      ingredients: changedIngredients,
+    };
+
+    this.recipeServ.addRecipe(submitObj);
+    this.matSuccess.open(SucessModalComponent);
+  }
+  ////// add recipe
 }

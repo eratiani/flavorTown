@@ -54,11 +54,11 @@
 
         .social-link {
           transition: all 0.3s ease;
-
+          cursor: pointer;
           position: relative;
 
           &:hover {
-            transform: translateY(-4px);
+            background-color: rgb(139, 71, 59);
           }
         }
       }
@@ -81,12 +81,7 @@
       text-align: center;
       margin-top: 40px;
       color: #fff;
-      font-family: Roboto;
       font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 100%;
-      /* 12px */
       letter-spacing: 0.6px;
 
       & a {

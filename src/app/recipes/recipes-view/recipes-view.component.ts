@@ -20,7 +20,7 @@ export class RecipesViewComponent implements OnInit, OnDestroy {
   ) {}
   async ngOnInit(): Promise<void> {
     this.recipes = await this.recipeServ.getRecipes();
-    this.displeyedRecipes = this.recipes.slice(0, 5);
+    this.displeyedRecipes = this.recipes.slice(0, 6);
     this.debouncingSubscription = this.debouncingServ
       .debounce(500)
       .subscribe(async (val) => {
