@@ -48,19 +48,18 @@ export class RecipesViewComponent implements OnInit, OnDestroy {
   }
   filterBySearchInp(queryArr: string[], recipes: IRecipe[]) {
     const [query, searchType] = queryArr;
+    const regex = new RegExp(`^${query}`);
     switch (searchType) {
       case 'favorites':
         return recipes.filter((recipe) => recipe.favorites);
       case 'title':
-        const regex = new RegExp(`^${query}`);
         return recipes.filter((recipe) =>
           regex.test(recipe.title.toLowerCase())
         );
       case 'ingredient':
-        const regex2 = new RegExp(`^${query}`);
         return recipes.filter((recipe) =>
           recipe.ingredients.some((ingredient) =>
-            regex2.test(ingredient.title.toLowerCase())
+            regex.test(ingredient.title.toLowerCase())
           )
         );
       case ' ':

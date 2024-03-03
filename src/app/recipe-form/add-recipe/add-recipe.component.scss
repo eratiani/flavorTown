@@ -139,7 +139,8 @@ p {
   border: 1px solid #5d37f3;
 }
 /* ingredient input */
-#ingredient--inp {
+/* ingredient input */
+.ingredient--inp {
   padding: 12px;
   margin-bottom: 8px;
   background-color: #fcfcfd;
@@ -149,8 +150,8 @@ p {
   outline: none;
 }
 
-#ingredient--inp:focus,
-#ingredient--inp:hover {
+.ingredient--inp:focus,
+.ingredient--inp:hover {
   background-color: #e6e6f0;
   border: 1px solid #5d37f3;
 }

@@ -7,7 +7,16 @@ import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditRecipeFormComponent } from './edit-recipe-form/edit-recipe-form.component';
-
+const routes = [
+  {
+    path: '',
+    component: AddRecipeViewComponent,
+  },
+  {
+    path: ':id',
+    component: EditRecipeFormComponent,
+  },
+];
 @NgModule({
   declarations: [
     AddRecipeComponent,
@@ -18,7 +27,7 @@ import { EditRecipeFormComponent } from './edit-recipe-form/edit-recipe-form.com
     CommonModule,
     ReactiveFormsModule,
     CoreModule,
-    RouterModule,
+    RouterModule.forChild(routes),
     MatDialogModule,
   ],
 })

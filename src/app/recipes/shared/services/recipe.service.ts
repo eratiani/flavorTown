@@ -17,6 +17,9 @@ export class RecipeService {
       );
       return data;
     } catch (error) {
+      /// for linting
+      console.log(error);
+      // for rethrowing error
       throw error;
     }
   }
@@ -27,6 +30,9 @@ export class RecipeService {
       );
       return data;
     } catch (error) {
+      /// for linting
+      console.log(error);
+      // for rethrowing error
       throw error;
     }
   }
@@ -38,6 +44,9 @@ export class RecipeService {
       );
       return data;
     } catch (error) {
+      /// for linting
+      console.log(error);
+      // for rethrowing error
       throw error;
     }
   }
@@ -48,6 +57,9 @@ export class RecipeService {
       );
       return request;
     } catch (error) {
+      /// for linting
+      console.log(error);
+      // for rethrowing error
       throw error;
     }
   }
@@ -55,6 +67,9 @@ export class RecipeService {
     try {
       await firstValueFrom(this.http.delete(`${this.apiUrl}/recipes/${id}`));
     } catch (error) {
+      /// for linting
+      console.log(error);
+      // for rethrowing error
       throw error;
     }
   }

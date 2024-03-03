@@ -11,6 +11,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+const routes = [
+  {
+    path: '',
+    component: RecipesViewComponent,
+  },
+  {
+    path: ':id',
+    component: RecipeDetailsComponent,
+  },
+];
 @NgModule({
   declarations: [
     RecipesViewComponent,
@@ -25,7 +35,7 @@ import { RouterModule } from '@angular/router';
     MatSelectModule,
     MatFormFieldModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forChild(routes),
   ],
 })
 export class RecipesModule {}

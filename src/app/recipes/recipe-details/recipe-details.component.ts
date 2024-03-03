@@ -37,7 +37,7 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
   async onFavClick() {
-    let favorites = !this.curRecipe.favorites;
+    const favorites = !this.curRecipe.favorites;
     try {
       await this.dbServ.updateRecipe(this.curRecipe.id, {
         favorites,

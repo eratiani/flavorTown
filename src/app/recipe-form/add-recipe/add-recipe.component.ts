@@ -64,10 +64,12 @@ export class AddRecipeComponent implements OnInit {
     this.handleFile(event.dataTransfer!.files);
   }
 
-  onFileSelected(event: any) {
-    this.handleFile(event.target.files);
+  onFileSelected(event: Event) {
+    const target = event.target as HTMLInputElement;
+    if (target.files) {
+      this.handleFile(target.files);
+    }
   }
-
   private handleFile(files: FileList) {
     if (files.length > 0) {
       const reader = new FileReader();
@@ -142,7 +144,7 @@ export class AddRecipeComponent implements OnInit {
   //////add recipe
   async createRecipe() {
     if (!this.recipeCreateForm.valid) return;
-    const image = this.converToBlob(this.image as string);
+    // const image = this.converToBlob(this.image as string);
     const defaultImg = 'default.jpg';
     const favorites: boolean = false;
     const { title, description, instructions, ingredients } =
