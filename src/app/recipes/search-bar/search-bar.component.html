@@ -16,7 +16,9 @@
   <div class="container--dropDown col-sm-12 col-md-4">
     <mat-form-field class="col-12">
       <mat-label>Select an option</mat-label>
+      <select id="Search--select" style="display: none"></select>
       <mat-select
+        id="Search--select"
         [(value)]="search"
         (selectionChange)="onSearchTypeChange($event)"
       >

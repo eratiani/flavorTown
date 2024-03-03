@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
@@ -22,6 +23,6 @@ export class HeaderComponent implements OnInit {
   }
   navHome() {
     this.authServ.isHomePage = true;
-    this.router.navigate(['./home']);
+    this.router.navigate(['home']);
   }
 }

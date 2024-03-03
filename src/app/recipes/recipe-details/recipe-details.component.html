@@ -2,7 +2,7 @@
   <app-header></app-header>
   <div class="container--page pt-4">
     <div class="container--card-content">
-      <a [routerLink]="'../'" class="card--content--return--btn"
+      <a routerLink="../../" class="card--content--return--btn"
         ><img src="../../../assets/arrow-left-black.png" alt="return arrow"
       /></a>
       <ng-template #loading> Loading... </ng-template>
@@ -39,7 +39,7 @@
           <div class="row">
             <a
               class="btn btn-primary me-4 col-sm-10 col-md-4 mb-4"
-              (click)="goHome()"
+              (click)="onEditRecipe()"
               >Edit Recipe</a
             >
             <a

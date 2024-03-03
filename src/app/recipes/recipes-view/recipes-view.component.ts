@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RecipeService } from '../shared/services/recipe.service';
 import { PageEvent } from '@angular/material/paginator';
+
+import { RecipeService } from '../shared/services/recipe.service';
 import { IRecipe } from '../shared/interfaces/recipe.interface';
 import { Subscription } from 'rxjs';
 import { DebouncingService } from 'src/app/shared/services/debouncing.service';
@@ -19,19 +20,24 @@ export class RecipesViewComponent implements OnInit, OnDestroy {
     private debouncingServ: DebouncingService
   ) {}
   async ngOnInit(): Promise<void> {
-    this.recipes = await this.recipeServ.getRecipes();
-    this.displeyedRecipes = this.recipes.slice(0, 6);
-    this.debouncingSubscription = this.debouncingServ
-      .debounce(500)
-      .subscribe(async (val) => {
-        this.recipes = this.filterBySearchInp(
-          val,
-          await this.recipeServ.getRecipes()
-        );
-        this.displeyedRecipes = this.recipes.slice(0, 5);
-      });
+    try {
+      this.recipes = await this.recipeServ.getRecipes();
+      this.displeyedRecipes = this.recipes.slice(0, 6);
+      this.debouncingSubscription = this.debouncingServ
+        .debounce(500)
+        .subscribe(async (val) => {
+          this.recipes = this.filterBySearchInp(
+            val,
+            await this.recipeServ.getRecipes()
+          );
+          this.displeyedRecipes = this.recipes.slice(0, 5);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   }
   ngOnDestroy(): void {
+    if (!this.debouncingSubscription) return;
     this.debouncingSubscription.unsubscribe();
   }
   onPageChange(e: PageEvent) {

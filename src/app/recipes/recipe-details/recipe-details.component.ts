@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { IRecipe } from '../shared/interfaces/recipe.interface';
 import { RecipeService } from '../shared/services/recipe.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-details',
@@ -16,23 +17,34 @@ export class RecipeDetailsComponent implements OnInit {
   ) {}
   curRecipe!: IRecipe;
   async ngOnInit(): Promise<void> {
-    /// same id lost on refresh
-    // const id = this.shortUuidServ.getActualUuid('1');
     this.route.queryParams.subscribe(async (params) => {
       const id = params['id'];
 
       if (!id) return;
-      this.curRecipe = await this.dbServ.getRecipe(id);
+      try {
+        this.curRecipe = await this.dbServ.getRecipe(id);
+      } catch (error) {
+        console.log(error);
+      }
     });
   }
   goHome() {
     this.router.navigate(['/home']);
   }
+  onEditRecipe() {
+    this.router.navigate(['/Recipe/edit'], {
+      queryParams: { id: this.curRecipe.id },
+    });
+  }
   async onFavClick() {
     let favorites = !this.curRecipe.favorites;
-    await this.dbServ.updateRecipe(this.curRecipe.id, {
-      favorites,
-    });
+    try {
+      await this.dbServ.updateRecipe(this.curRecipe.id, {
+        favorites,
+      });
+    } catch (error) {
+      console.log(error);
+    }
     this.curRecipe.favorites = !this.curRecipe.favorites;
   }
 }

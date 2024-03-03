@@ -1,41 +1,75 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FormGroup,
-  FormBuilder,
-  Validators,
   FormArray,
+  FormBuilder,
   FormControl,
+  FormGroup,
+  Validators,
 } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 
-import { IRecipe } from 'src/app/recipes/shared/interfaces/recipe.interface';
+import {
+  IIngredients,
+  IRecipe,
+} from 'src/app/recipes/shared/interfaces/recipe.interface';
+import { AuthenticationService } from 'src/app/core/service/authentication.service';
 import { RecipeService } from 'src/app/recipes/shared/services/recipe.service';
 import { SucessModalComponent } from 'src/app/stand-alone/sucess-modal/sucess-modal.component';
+
 @Component({
-  selector: 'app-add-recipe',
-  templateUrl: './add-recipe.component.html',
-  styleUrls: ['./add-recipe.component.scss'],
+  selector: 'app-edit-recipe-form',
+  templateUrl: './edit-recipe-form.component.html',
+  styleUrls: ['./edit-recipe-form.component.scss'],
 })
-export class AddRecipeComponent implements OnInit {
-  image: string | undefined;
-  imageName: string | undefined;
+export class EditRecipeFormComponent implements OnInit {
+  curRecipe!: IRecipe;
   recipeCreateForm!: FormGroup;
 
   constructor(
+    private route: ActivatedRoute,
+    private dbServ: RecipeService,
+    private authServ: AuthenticationService,
+    private router: Router,
     private formBuilder: FormBuilder,
-    private recipeServ: RecipeService,
     public matSuccess: MatDialog
   ) {}
   ngOnInit(): void {
     this.recipeCreateForm = this.formBuilder.group({
-      image: [null, [Validators.required]],
       title: [null, [Validators.required, Validators.minLength(2)]],
       description: [null, [Validators.required, Validators.minLength(4)]],
       instructions: [null, [Validators.required, Validators.minLength(4)]],
       ingredients: new FormArray([new FormControl(null, Validators.required)]),
     });
-  }
+    this.route.queryParams.subscribe(async (params) => {
+      const id = params['id'];
 
+      if (!id) return;
+      try {
+        this.curRecipe = await this.dbServ.getRecipe(id);
+      } catch (error) {
+        console.log(error);
+      }
+      this.recipeCreateForm.patchValue({
+        title: this.curRecipe.title,
+        description: this.curRecipe.description,
+        instructions: this.curRecipe.instructions,
+      });
+
+      const ingredientsFormArray = this.recipeCreateForm.get(
+        'ingredients'
+      ) as FormArray;
+      ingredientsFormArray.clear();
+
+      if (this.curRecipe.ingredients && this.curRecipe.ingredients.length > 0) {
+        this.curRecipe.ingredients.forEach((ingredient: IIngredients) => {
+          ingredientsFormArray.push(
+            new FormControl(ingredient.title, Validators.required)
+          );
+        });
+      }
+    });
+  }
   ////////form array
   get formArray(): FormArray {
     return this.recipeCreateForm.get('ingredients') as FormArray;
@@ -53,48 +87,13 @@ export class AddRecipeComponent implements OnInit {
     return this.formArray.controls as FormControl[];
   }
   ////////form array
-
-  ////////img drag@ drop
-  onDragOver(event: Event) {
-    event.preventDefault();
+  goBack() {
+    this.authServ.isHomePage = true;
+    this.router.navigate(['/home/details'], {
+      queryParams: { id: this.curRecipe.id },
+    });
   }
 
-  onDrop(event: DragEvent) {
-    event.preventDefault();
-    this.handleFile(event.dataTransfer!.files);
-  }
-
-  onFileSelected(event: any) {
-    this.handleFile(event.target.files);
-  }
-
-  private handleFile(files: FileList) {
-    if (files.length > 0) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const img = reader.result as string;
-        const imgName = files[0].name;
-        this.image = img;
-        this.imageName = imgName;
-      };
-      reader.readAsDataURL(files[0]);
-    }
-  }
-  removeImage() {
-    this.recipeCreateForm.get('image')?.reset();
-    this.image = undefined;
-    this.imageName = undefined;
-  }
-  converToBlob(imageData: string) {
-    const byteCharacters = atob(imageData.split(',')[1]);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    return new Blob([byteArray], { type: 'image/jpeg' });
-  }
-  ////////img drag@ drop
   //// utility
   checkForError(
     formElement: string,
@@ -139,12 +138,11 @@ export class AddRecipeComponent implements OnInit {
   }
   ///utility
 
-  //////add recipe
-  async createRecipe() {
+  //////edit recipe
+  async updateRecipe() {
     if (!this.recipeCreateForm.valid) return;
-    const image = this.converToBlob(this.image as string);
-    const defaultImg = 'default.jpg';
     const favorites: boolean = false;
+    const id = this.curRecipe.id;
     const { title, description, instructions, ingredients } =
       this.recipeCreateForm.value;
     const changedIngredients = (ingredients as string[]).map((ing: string) => ({
@@ -152,21 +150,19 @@ export class AddRecipeComponent implements OnInit {
       textColor: 'white',
       backgroundColor: 'rgb(177, 28, 214)',
     }));
-    const submitObj: Omit<IRecipe, 'id'> = {
-      imgUrl: defaultImg,
+    const submitObj: Omit<IRecipe, 'id' | 'imgUrl'> = {
       instructions,
       title,
       favorites,
       description,
       ingredients: changedIngredients,
     };
-
     try {
-      await this.recipeServ.addRecipe(submitObj);
+      await this.dbServ.updateRecipe(id, submitObj);
     } catch (error) {
       console.log(error);
     }
     this.matSuccess.open(SucessModalComponent);
   }
-  ////// add recipe
+  ////// edit recipe
 }

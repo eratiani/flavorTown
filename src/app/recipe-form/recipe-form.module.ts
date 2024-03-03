@@ -1,4 +1,4 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -6,9 +6,14 @@ import { AddRecipeViewComponent } from './add-recipe-view/add-recipe-view.compon
 import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
+import { EditRecipeFormComponent } from './edit-recipe-form/edit-recipe-form.component';
 
 @NgModule({
-  declarations: [AddRecipeComponent, AddRecipeViewComponent],
+  declarations: [
+    AddRecipeComponent,
+    AddRecipeViewComponent,
+    EditRecipeFormComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,

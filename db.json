@@ -36,7 +36,7 @@
           "backgroundColor": "rgb(177, 28, 214)"
         }
       ],
-      "favorites": true,
+      "favorites": false,
       "instructions": "Cook spaghetti; brown beef, onions, and garlic; add tomato sauce and herbs; combine with spaghetti.",
       "imgUrl": "bolognese.jpg"
     },
@@ -221,7 +221,7 @@
           "backgroundColor": "rgb(177, 28, 214)"
         }
       ],
-      "favorites": false,
+      "favorites": true,
       "instructions": "Spread butter on bread, add cheese, and grill until the bread is golden and the cheese is melted.",
       "imgUrl": "grilled-chese-sand.jpg"
     },
@@ -491,15 +491,60 @@
       ]
     },
     {
-      "id": "6f4ec50c-e54d-42cd-8b33-631c3447b5b5",
+      "id": "382d1086-ff92-445f-b492-8f1de4ddc51e",
       "imgUrl": "default.jpg",
-      "instructions": "asdsad",
-      "title": "asd",
+      "instructions": "asdasd",
+      "title": "dasd",
       "favorites": false,
-      "description": "sadasd",
+      "description": "dasdasd",
       "ingredients": [
         {
-          "title": "asd",
+          "title": "asdasd",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ]
+    },
+    {
+      "id": "f7eabe2b-6b6f-47ed-8fb8-58c5e34adf89",
+      "imgUrl": "default.jpg",
+      "instructions": "asdasd",
+      "title": "asdasd",
+      "favorites": true,
+      "description": "sadas",
+      "ingredients": [
+        {
+          "title": "dasd",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "sdad",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "dasd",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "w3ew",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ]
+    },
+    {
+      "id": "5699967f-54c3-4650-ba96-4e6aac547af0",
+      "imgUrl": "default.jpg",
+      "instructions": "dasdss",
+      "title": "dasda",
+      "favorites": true,
+      "description": "asdasdas",
+      "ingredients": [
+        {
+          "title": "sdasd",
           "textColor": "white",
           "backgroundColor": "rgb(177, 28, 214)"
         }

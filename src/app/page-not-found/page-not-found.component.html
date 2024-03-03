@@ -1,1 +1,67 @@
-<p>page-not-found works!</p>
+<div class="container-all">
+  <div>
+    <div class="rain front-row">
+      <ng-container *ngFor="let drop of drops">
+        <div
+          class="drop"
+          [style.left.%]="drop.left"
+          [style.bottom.%]="drop.bottom"
+          [style.animation-delay.s]="drop.animationDelay"
+          [style.animation-duration.s]="drop.animationDuration"
+        >
+          <div
+            class="stem"
+            [style.animation-delay.s]="drop.animationDelay"
+            [style.animation-duration.s]="drop.animationDuration"
+          ></div>
+          <div
+            class="splat"
+            [style.animation-delay.s]="drop.animationDelay"
+            [style.animation-duration.s]="drop.animationDuration"
+          ></div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="rain back-row">
+      <ng-container *ngFor="let backDrop of backDrops">
+        <div
+          class="drop"
+          [style.right.%]="backDrop.right"
+          [style.bottom.%]="backDrop.bottom"
+          [style.animation-delay.s]="backDrop.animationDelay"
+          [style.animation-duration.s]="backDrop.animationDuration"
+        >
+          <div
+            class="stem"
+            [style.animation-delay.s]="backDrop.animationDelay"
+            [style.animation-duration.s]="backDrop.animationDuration"
+          ></div>
+          <div
+            class="splat"
+            [style.animation-delay.s]="backDrop.animationDelay"
+            [style.animation-duration.s]="backDrop.animationDuration"
+          ></div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div id="clouds">
+      <div class="cloud x1"></div>
+      <div class="cloud x1_5"></div>
+      <div class="cloud x2"></div>
+      <div class="cloud x3"></div>
+      <div class="cloud x4"></div>
+      <div class="cloud x5"></div>
+    </div>
+    <div class="c">
+      <div class="_404 blink_me">404</div>
+      <hr />
+      <div class="_1">THE PAGE</div>
+      <br />
+      <div class="_2">WAS NOT FOUND</div>
+      <br />
+      <a class="btn" (click)="onNavigateBack()">Get BACK?</a>
+    </div>
+  </div>
+</div>

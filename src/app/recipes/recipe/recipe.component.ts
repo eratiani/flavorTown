@@ -6,9 +6,9 @@ import {
   animate,
 } from '@angular/animations';
 import { Component, Input } from '@angular/core';
-import { IRecipe } from '../shared/interfaces/recipe.interface';
 import { Router } from '@angular/router';
-import { ShortUuidService } from 'src/app/shared/services/short-uuid.service';
+
+import { IRecipe } from '../shared/interfaces/recipe.interface';
 
 @Component({
   selector: 'app-recipe',
@@ -26,10 +26,7 @@ import { ShortUuidService } from 'src/app/shared/services/short-uuid.service';
 export class RecipeComponent {
   @Input() currRecipe!: IRecipe;
   isHovered: boolean = false;
-  constructor(
-    private router: Router,
-    private shortUuidServ: ShortUuidService
-  ) {}
+  constructor(private router: Router) {}
   onCardHover() {
     this.isHovered = true;
   }
