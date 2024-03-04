@@ -1,0 +1,39 @@
+.form--content--return--btn {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 24px;
+  background-color: #e4e3eb;
+}
+.container--form {
+  width: 98%;
+  margin: 0 auto;
+  overflow: hidden;
+  @media only screen and (min-width: 600px) {
+    width: auto;
+  }
+}
+.form--content--return--btn > img {
+  max-width: 100%;
+}
+.container--page {
+  background-color: #fbfaff;
+  padding: 0;
+  padding-top: 40px;
+  padding-bottom: 110px;
+}
+.container--form {
+  display: flex;
+
+  align-items: flex-start;
+}
+
+.title--form {
+  font-size: 32px;
+  line-height: 50px;
+  color: #1a1a1f;
+  margin-bottom: 40px;
+}

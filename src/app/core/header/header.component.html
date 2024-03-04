@@ -1,0 +1,13 @@
+<header
+  class="container--header container"
+  [ngClass]="{ 'center-align': !isHomePage }"
+>
+  <a (click)="navHome()" class="logo-wrapper">
+    <img src="../../../assets/logo.png" alt="" class="logo" />
+  </a>
+  <div *ngIf="isHomePage" class="btn--wrapper">
+    <a class="btn btn-primary" *ngIf="isHomePage" (click)="onAddRecipe()"
+      >Add Recipe</a
+    >
+  </div>
+</header>

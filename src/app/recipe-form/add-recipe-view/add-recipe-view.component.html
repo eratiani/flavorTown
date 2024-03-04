@@ -1,0 +1,20 @@
+<app-header></app-header>
+<section class="container--page container">
+  <div class="container--form d-flex flex-column flex-sm-row">
+    <div
+      class="col-12 col-sm-3 pe-4 ps-sm-4 d-flex justify-content-end justify-content-sm-start"
+    >
+      <a
+        style="cursor: pointer"
+        (click)="navHome()"
+        class="form--content--return--btn"
+        ><img src="../../../assets/arrow-left-black.png" alt="return arrow"
+      /></a>
+    </div>
+    <div class="container--form--inner col-12 col-sm-8">
+      <h2 class="title--form">Add Recipe</h2>
+      <app-add-recipe></app-add-recipe>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,61 @@
+<div class="container--main">
+  <app-header></app-header>
+  <div class="container--page pt-4">
+    <div class="container--card-content">
+      <a routerLink="../../" class="card--content--return--btn"
+        ><img src="../../../assets/arrow-left-black.png" alt="return arrow"
+      /></a>
+      <ng-template #loading> Loading... </ng-template>
+      <div
+        class="container--card-content--inner"
+        *ngIf="curRecipe; else loading"
+      >
+        <div class="container--image">
+          <img
+            src="{{ '../../../assets/recipe-imgs/' + curRecipe.imgUrl }}"
+            alt="{{ curRecipe.title }}"
+            class="card--image"
+          />
+        </div>
+        <h2 class="card--header mt-4">{{ curRecipe.title }}</h2>
+        <h3 class="card--header">Ingredients</h3>
+        <div class="card--ingredient--container">
+          <span
+            class="card--ingredient"
+            *ngFor="let ingredient of curRecipe.ingredients"
+            [ngStyle]="{
+              color: ingredient.textColor,
+              'background-color': ingredient.backgroundColor
+            }"
+            >{{ ingredient.title }}</span
+          >
+        </div>
+        <h3 class="card--header">Dish Details</h3>
+
+        <p class="card--description">{{ curRecipe.description }}</p>
+        <h3 class="card--header">Cooking instructions</h3>
+        <p class="card--description">{{ curRecipe.instructions }}</p>
+        <div class="container--btn">
+          <div class="row">
+            <a
+              class="btn btn-primary me-4 col-sm-10 col-md-4 mb-4"
+              (click)="onEditRecipe()"
+              >Edit Recipe</a
+            >
+            <a
+              class="btn btn-primary col-sm-10 col-md-4 mb-4"
+              (click)="onFavClick()"
+              >{{
+                curRecipe.favorites
+                  ? "Remove From Favorites"
+                  : "Add To Favorites"
+              }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

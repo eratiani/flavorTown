@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+  <div
+    *ngIf="search !== 'favorites'"
+    class="col-sm-12 mb-4 col-md-8 form-floating"
+  >
+    <input
+      [(ngModel)]="searchInput"
+      (input)="onSearch($event)"
+      class="form-control"
+      id="myInput"
+      type="text"
+      placeholder=""
+    />
+    <label class="filter-col mx-4" for="myInput">filter by {{ search }}.</label>
+  </div>
+  <div class="container--dropDown col-sm-12 col-md-4">
+    <mat-form-field class="col-12">
+      <mat-label>Select an option</mat-label>
+      <select id="Search--select" style="display: none"></select>
+      <mat-select
+        id="Search--select"
+        [(value)]="search"
+        (selectionChange)="onSearchTypeChange($event)"
+      >
+        <mat-option value="favorites">favorites</mat-option>
+        <mat-option value="title">title</mat-option>
+        <mat-option value="ingredient">ingredient</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

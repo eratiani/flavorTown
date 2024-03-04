@@ -1,0 +1,16 @@
+.container--recipe {
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url(../../../assets/recipe-imgs/woman-1979272_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    background-position-x: auto;
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<section class="container mt-4">
+  <h2 class="text-uppercase">all Recipes</h2>
+
+  <app-search-bar></app-search-bar>
+
+  <div class="row container--recipe mt-4">
+    <ng-container *ngFor="let recipe of displeyedRecipes">
+      <app-recipe
+        class="mb-4 d-flex justify-content-center"
+        [currRecipe]="recipe"
+      ></app-recipe>
+    </ng-container>
+  </div>
+</section>
+<mat-paginator
+  [length]="recipes.length"
+  [pageSizeOptions]="[6, 12, 50]"
+  aria-label="Select page"
+  (page)="onPageChange($event)"
+>
+</mat-paginator>
+
+<app-footer></app-footer>

@@ -1,0 +1,479 @@
+{
+  "recipes": [
+    {
+      "id": "c8fca8c4-5a51-4f1f-94a3-af7b98a7d65e",
+      "title": "Spaghetti Bolognese",
+      "description": "Classic Italian pasta dish with a rich meat sauce.",
+      "ingredients": [
+        {
+          "title": "spaghetti",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "ground beef",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "tomato sauce",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "onions",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "garlic",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "herbs",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Cook spaghetti; brown beef, onions, and garlic; add tomato sauce and herbs; combine with spaghetti.",
+      "imgUrl": "bolognese.jpg"
+    },
+    {
+      "id": "e0de3a95-9eb8-49ce-98c5-90ebc2a81c57",
+      "title": "Chicken Caesar Salad",
+      "description": "Refreshing salad with grilled chicken and Caesar dressing.",
+      "ingredients": [
+        {
+          "title": "romaine lettuce",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "grilled chicken",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "croutons",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "Parmesan cheese",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "Caesar dressing",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Combine lettuce, grilled chicken, croutons, and Parmesan cheese; toss with Caesar dressing.",
+      "imgUrl": "caesar-salad-chicken.jpg"
+    },
+    {
+      "id": "697104d3-ecf3-4d3e-8be5-4883b9d341a5",
+      "title": "Vegetarian Stir-Fry",
+      "description": "Healthy and colorful stir-fry with a variety of vegetables.",
+      "ingredients": [
+        {
+          "title": "broccoli",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "bell peppers",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "carrots",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "tofu",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "soy sauce",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "ginger",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "garlic",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": true,
+      "instructions": "Stir-fry vegetables and tofu in a pan with soy sauce, ginger, and garlic until cooked.",
+      "imgUrl": "veg-stir-fry.jpg"
+    },
+    {
+      "id": "80de6b0e-6d71-4c3a-bb3f-83f7b3cc7b3c",
+      "title": "Chocolate Chip Cookies",
+      "description": "Classic homemade chocolate chip cookies.",
+      "ingredients": [
+        {
+          "title": "flour",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "butter",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "sugar",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "chocolate chips",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "vanilla extract",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "baking soda",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Mix ingredients, drop spoonfuls onto a baking sheet, and bake until golden brown.",
+      "imgUrl": "choc-chip.jpg"
+    },
+    {
+      "id": "c1ef2b60-058b-4e32-a9e3-c36c24d8004a",
+      "title": "Mango Salsa",
+      "description": "Refreshing salsa with fresh mango, tomatoes, and cilantro.",
+      "ingredients": [
+        {
+          "title": "mango",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "tomatoes",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "red onion",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "cilantro",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "lime juice",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "salt",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Dice ingredients, mix together, and squeeze lime juice over the top.",
+      "imgUrl": "mango-salsa.jpg"
+    },
+    {
+      "id": "4ea3b6f1-8d26-4eaf-99e9-1a83551113d5",
+      "title": "Grilled Cheese Sandwich",
+      "description": "Classic comfort food with melted cheese between toasted bread slices.",
+      "ingredients": [
+        {
+          "title": "bread",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "cheddar cheese",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "butter",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": true,
+      "instructions": "Spread butter on bread, add cheese, and grill until the bread is golden and the cheese is melted.",
+      "imgUrl": "grilled-chese-sand.jpg"
+    },
+    {
+      "id": "7c2a465c-c65e-4ff5-8b6a-e8c6bc50a56a",
+      "title": "Caprese Salad",
+      "description": "Simple salad with fresh tomatoes, mozzarella, and basil.",
+      "ingredients": [
+        {
+          "title": "tomatoes",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "mozzarella cheese",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "fresh basil",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "balsamic glaze",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "olive oil",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "salt",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Slice tomatoes and mozzarella, arrange with fresh basil, drizzle with balsamic glaze and olive oil, and sprinkle with salt.",
+      "imgUrl": "caprese-sal.jpg"
+    },
+    {
+      "id": "fea8c086-3b9e-4859-9fc7-6860d94e8ba3",
+      "title": "Chicken Noodle Soup",
+      "description": "Comforting soup with chicken, noodles, and vegetables.",
+      "ingredients": [
+        {
+          "title": "chicken broth",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "cooked chicken",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "carrots",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "celery",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "onions",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "noodles",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "herbs",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Combine ingredients and simmer until vegetables are tender and noodles are cooked.",
+      "imgUrl": "chicken-nood-soup.jpg"
+    },
+    {
+      "id": "b7c158b9-695b-4484-b8c5-5ebaf2eeed3d",
+      "title": "Pancakes",
+      "description": "Fluffy pancakes for a delicious breakfast.",
+      "ingredients": [
+        {
+          "title": "flour",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "milk",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "eggs",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "baking powder",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "sugar",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "vanilla extract",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "butter",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Mix ingredients, pour batter onto a griddle, and cook until bubbles form on the surface.",
+      "imgUrl": "pankackes.jpg"
+    },
+    {
+      "id": "83c09061-6c96-4f8c-852d-7bf9b6b7a456",
+      "title": "Greek Salad",
+      "description": "Refreshing salad with tomatoes, cucumbers, olives, and feta cheese.",
+      "ingredients": [
+        {
+          "title": "tomatoes",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "cucumbers",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "kalamata olives",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "feta cheese",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "red onion",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "olive oil",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "oregano",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ],
+      "favorites": false,
+      "instructions": "Dice ingredients, toss together with olive oil and oregano, and top with feta cheese.",
+      "imgUrl": "greek-sal.jpg"
+    },
+    {
+      "id": "003afc95-1ae8-4d85-b781-1561e242158b",
+      "imgUrl": "default.jpg",
+      "instructions": "1) Prepare the Dough:\n\nIn a large mixing bowl, combine the flour and salt.\nGradually add water while kneading the dough until it becomes smooth and elastic.\nCover the dough with a damp cloth and let it rest for at least 30 minutes.\n2) Prepare the Filling:\n\nIn a large mixing bowl, combine the ground meat, chopped onion, minced garlic, coriander, cumin, salt, and pepper.\nMix the ingredients thoroughly until well combined.\n3) Shape the Khinkali:\n\nTake a small portion of the dough and roll it into a thin circle on a floured surface.\nPlace a spoonful of the meat filling in the center of the dough circle.\nLift the edges of the dough, creating pleats, and twist the top to seal the khinkali. The traditional shape resembles a twisted topknot.\n4) Cook the Khinkali:\n\nBring a large pot of water to a boil. Optionally, you can add quartered onions, bay leaves, and salt for extra flavor.\nGently place the khinkali in the boiling water and cook for about 10-12 minutes, or until the dumplings float to the surface.\n5) Serve:\n\nCarefully remove the khinkali from the pot with a slotted spoon and place them on a serving platter.\nServe hot with a side of black pepper and enjoy the burst of flavors with each juicy bite.",
+      "title": "Traditional Georgian Khinkali Recipe",
+      "favorites": true,
+      "description": "Khinkali, a beloved Georgian dumpling, is a culinary masterpiece that has been perfected over generations. These juicy, meat-filled dumplings are a staple in Georgian cuisine, known for their distinctive shape and delicious flavor. This recipe will guide you through the process of creating authentic khinkali that will transport your taste buds to the vibrant streets of Tbilisi.",
+      "ingredients": [
+        {
+          "title": "3 cups all-purpose flour",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 cup water",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1/2 teaspoon salt",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": " pound ground beef or a mix of beef and pork",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 large onion, finely chopped",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "2 cloves garlic, minced",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 teaspoon ground coriander",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 teaspoon ground cumin",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "Salt and pepper to taste",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "6 cups water",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "1 onion, quartered",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "2 bay leaves",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        },
+        {
+          "title": "Salt to taste",
+          "textColor": "white",
+          "backgroundColor": "rgb(177, 28, 214)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<div
+  class="card"
+  style="width: 18rem; position: relative; overflow: hidden"
+  (mouseover)="onCardHover()"
+  (mouseleave)="onCardLeave()"
+>
+  <img
+    [@cardHover]="isHovered"
+    class="card-img-top"
+    style="min-height: 190.66px; height: 100%"
+    src="{{ '../../../assets/recipe-imgs/' + currRecipe.imgUrl }}"
+    alt="Card image cap"
+  />
+  <div class="card-body">
+    <p class="card-text">
+      {{ currRecipe.title }}
+    </p>
+  </div>
+  <div
+    class="overlay-card container d-flex flex-column justify-content-between py-4 align-items-center"
+    *ngIf="isHovered"
+  >
+    <h2 class="card-text">
+      {{ currRecipe.description | textCut : 4 }}
+    </h2>
+    <p class="card-text">
+      {{ currRecipe.instructions | textCut : 10 }}
+    </p>
+    <div (click)="onNavigation()" class="btn btn-primary">More Details</div>
+  </div>
+</div>
